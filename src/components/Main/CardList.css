@@ -1,0 +1,94 @@
+@import "../../App.css";
+.booklist {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  row-gap: 80px;
+  /* align-items: flex-start; */
+  margin: 10rem auto;
+  max-width: 1170px;
+}
+.book {
+  position: relative;
+  width: 170px;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  height: fit-content;
+  justify-self: center;
+  -webkit-box-shadow: -7px 7px 5px 0px rgb(100, 100, 100);
+  -moz-box-shadow: -7px 7px 5px 0px rgba(100, 100, 100, 1);
+  box-shadow: -7px 7px 5px 0px rgba(100, 100, 100, 1);
+}
+.book:hover {
+  transform: translate(2px, 2px);
+  -webkit-box-shadow: -7px 7px 5px 0px rgb(116, 116, 116);
+  -moz-box-shadow: -7px 7px 5px 0px rgb(114, 113, 113);
+  box-shadow: -7px 7px 5px 0px rgb(119, 119, 119);
+}
+.book img {
+  max-width: 100%;
+  height: auto;
+  /* border-top-right-radius: 5%; */
+  border-bottom-right-radius: 5%;
+}
+.title {
+  font-size: 16px;
+  margin-top: 5px;
+  padding: 5px;
+  height: 38px;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.author {
+  margin-top: 5px;
+  color: rgb(128, 128, 128);
+  padding: 5px;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.price {
+  margin-top: 10px;
+  color: crimson;
+  font-size: 24px;
+  padding: 5px;
+  font-weight: 600;
+}
+.bx-x {
+  display: none;
+}
+.book:hover .bx-x {
+  display: block;
+  color: crimson;
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.book:hover .bx-x:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 460px) {
+  .booklist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 740px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1140px) {
+  .booklist {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
