@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin: 120px auto;
+  margin-bottom: 40px;
   min-width: 80px;
   max-width: 20%;
 }
@@ -18,8 +19,7 @@
   background-color: inherit;
 }
 .pagination-bar li a {
-  color: #551a8b;
-  font-weight: bold;
+  color: var(--main-color-dark);
   display: block;
   padding: 8px;
 }

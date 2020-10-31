@@ -19,19 +19,9 @@
   top: 0;
   z-index: 10;
 }
-.logo {
-  padding: 4px 4px 3px 5px;
-  background-color: #551a8b;
-  color: #bbbbce;
-  grid-column-start: 2;
+.logo-container {
   align-self: center;
-  justify-self: center;
-  border-radius: 25px;
-}
-.p-logo {
-  font-size: 12px;
-  letter-spacing: 10px;
-  transform: translate(3px, -2px);
+  grid-column-start: 2;
 }
 .burger-container {
   align-self: center;

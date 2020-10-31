@@ -6,7 +6,7 @@
   gap: 20px;
   row-gap: 80px;
   /* align-items: flex-start; */
-  margin: 10rem auto;
+  margin: auto;
   max-width: 1170px;
 }
 .book {

@@ -1,0 +1,72 @@
+@import "../../App.css";
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+}
+.search-form {
+  padding: 7px;
+  margin: auto;
+}
+input {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid var(--main-color-medium);
+  color: var(--main-color-dark);
+  margin-bottom: 5px;
+  border-radius: 12px;
+}
+input::placeholder {
+  font-size: 12px;
+  color: var(--main-color);
+}
+.search-btn {
+  padding: 5px 5px 8px;
+  border: none;
+  background-color: var(--main-color-medium);
+  color: white;
+  border-radius: 12px;
+}
+.bx-search-alt-2 {
+  padding-left: 8px;
+  font-size: 16px;
+}
+.select {
+  /* width: 150px; */
+  border: 1px solid var(--main-color-medium);
+  color: var(--main-color-dark);
+  margin: 20px auto;
+  padding: 6px;
+  font-size: 14px;
+}
+.select::selection {
+  display: none;
+}
+@media screen and (min-width: 740px) {
+  .search-container {
+    flex-direction: row;
+    margin: 70px auto;
+    width: auto;
+  }
+  .search-form {
+    margin: 20px;
+  }
+  .search-btn {
+    border-radius: 0%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .select {
+    margin: 26px;
+    height: 30px;
+    padding: 5px;
+  }
+  input {
+    width: 350px;
+    border-radius: 0%;
+  }
+}
