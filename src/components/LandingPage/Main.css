@@ -20,8 +20,9 @@
   max-width: 90%;
 }
 .sub-title {
-  font-size: clamp(2vh, 1.2rem, 3vw);
-  max-width: 80%;
+  font-size: clamp(2.5vh, 1.2rem, 3vw);
+  width: 80%;
+  max-width: 480px;
 }
 .main-title,
 .sub-title {
@@ -42,6 +43,10 @@
   background-color: var(--main-color-medium);
   color: white;
   border-radius: 12px;
+  cursor: pointer;
+}
+.main-btn:hover {
+  background-color: var(--main-color-dark);
 }
 
 @media screen and (min-width: 460px) {

@@ -1,31 +1,29 @@
 @import "../../App.css";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Encode Sans Expanded", sans-serif;
-  list-style-type: none;
-  text-decoration: none;
-}
 .nav {
   background: rgb(187, 187, 206);
   background-image: linear-gradient(rgb(165, 165, 189), rgb(252, 250, 250));
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   min-height: 80px;
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
+  padding: 0 10px;
 }
 .logo-container {
+  justify-self: center;
   align-self: center;
   grid-column-start: 2;
 }
+.logo-container svg {
+  width: 99px;
+  height: 33px;
+}
 .burger-container {
   align-self: center;
-  grid-column-start: 11;
+  grid-column-start: 1;
+  position: relative;
 }
 .burger {
   width: 35px;
@@ -36,23 +34,75 @@
 .links {
   display: none;
 }
+.cart-nav {
+  justify-self: end;
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+
+  color: var(--main-color);
+}
+.cart-nav .bx {
+  border-radius: 50%;
+  background-color: var(--main-color-medium);
+  padding: 4px;
+}
+.cart-nav .bx:hover {
+  background-color: var(--main-color-dark);
+}
+.counter {
+  font-size: 12px;
+  position: absolute;
+  background-color: #fff;
+  padding: 2px 5px;
+  border-radius: 50%;
+  color: var(--main-color-medium);
+  top: -8px;
+  right: -5px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 460px) {
+  .logo-container svg {
+    width: 120px;
+    height: 40px;
+  }
+  .burger-container {
+    margin-left: 15px;
+  }
+  .cart-nav {
+    margin-right: 15px;
+  }
+}
 
 @media screen and (min-width: 740px) {
+  .nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logo-container svg {
+    width: 180px;
+    height: 60px;
+  }
   .links {
-    padding-right: 8vw;
-    padding-left: 20px;
+    /* padding-right: 50px; */
+    justify-self: center;
+    padding-left: 40px;
     align-self: center;
     display: grid;
     grid-auto-flow: column;
-    grid-column-start: 11;
+    grid-column-start: 2;
     font-size: 1rem;
     column-gap: 60px;
   }
   .links li a {
+    color: var(--main-color-medium);
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.15em;
     position: relative;
+  }
+  .links li a:hover {
+    color: var(--main-color-dark);
   }
   .links li a:after {
     background: none repeat scroll 0 0 transparent;
@@ -62,7 +112,7 @@
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #551a8b;
+    background: var(--main-color-medium);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
@@ -73,7 +123,11 @@
   .burger-container {
     display: none;
   }
-  .logo {
-    padding: 8px 8px 6px 10px;
+  .logo-container {
+    grid-column-start: 1;
   }
-} ;
+  .cart-nav {
+    justify-self: center;
+    grid-column-start: 3;
+  }
+}

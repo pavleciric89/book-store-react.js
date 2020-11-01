@@ -3,10 +3,12 @@
 .search-container {
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
+  margin: 120px auto;
+  margin-bottom: 90px;
   width: 90%;
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 .search-form {
   padding: 7px;
@@ -30,6 +32,10 @@ input::placeholder {
   background-color: var(--main-color-medium);
   color: white;
   border-radius: 12px;
+  cursor: pointer;
+}
+.search-btn:hover {
+  background-color: var(--main-color-dark);
 }
 .bx-search-alt-2 {
   padding-left: 8px;
@@ -42,6 +48,7 @@ input::placeholder {
   margin: 20px auto;
   padding: 6px;
   font-size: 14px;
+  cursor: pointer;
 }
 .select::selection {
   display: none;
@@ -49,7 +56,7 @@ input::placeholder {
 @media screen and (min-width: 740px) {
   .search-container {
     flex-direction: row;
-    margin: 70px auto;
+    margin: 100px auto;
     width: auto;
   }
   .search-form {

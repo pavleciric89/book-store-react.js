@@ -48,6 +48,18 @@
   letter-spacing: 1px;
   font-size: 12px;
 }
+.price-cart {
+  display: flex;
+}
+.bxs-cart-add {
+  margin: 17px 20px 0 auto;
+  color: var(--main-color-medium);
+  cursor: pointer;
+}
+.bxs-cart-add:hover {
+  color: var(--main-color-dark);
+}
+
 .price {
   margin-top: 10px;
   color: crimson;
