@@ -10,7 +10,7 @@ const Searchbar = () => {
           placeholder="Search by title, author or keyword..."
         />
         <button className="btn search-btn">
-          Search <i class="bx bx-search-alt-2"></i>
+          Search <i className="bx bx-search-alt-2"></i>
         </button>
       </form>
       <select name="" id="" className="select">

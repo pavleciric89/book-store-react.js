@@ -5,9 +5,12 @@
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   row-gap: 80px;
-  /* align-items: flex-start; */
   margin: auto;
   max-width: 1170px;
+  padding: 10px 0;
+}
+.booklist div {
+  margin: auto;
 }
 .book {
   position: relative;
@@ -31,6 +34,7 @@
   height: auto;
   /* border-top-right-radius: 5%; */
   border-bottom-right-radius: 5%;
+  cursor: pointer;
 }
 .title {
   font-size: 16px;
@@ -39,6 +43,7 @@
   height: 38px;
   height: fit-content;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .author {

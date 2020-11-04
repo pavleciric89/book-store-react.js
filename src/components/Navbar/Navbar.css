@@ -97,7 +97,6 @@
   .links li a {
     color: var(--main-color-medium);
     font-size: 18px;
-    font-weight: 600;
     letter-spacing: 0.15em;
     position: relative;
   }

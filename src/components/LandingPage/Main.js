@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Main.css";
 
 const Main = () => {
@@ -13,7 +14,9 @@ const Main = () => {
             much more!
             <br /> FREE shipping on orders over $35.
           </p>
-          <button className="main-btn">See All Books</button>
+          <Link to="/booklist">
+            <button className="main-btn">See All Books</button>
+          </Link>
         </div>
         <div className="img">
           <div className="hero"></div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Pagination.css";
 import _ from "lodash";
+import { v1 as uuidv1 } from "uuid";
 
 const Pagination = (props) => {
   const { itemsCount, pageSize, onPageChange, currentPage, books } = props;
@@ -13,25 +14,21 @@ const Pagination = (props) => {
       <ul className="pagination-bar">
         {currentPage === 1 ? null : (
           <li>
-            <a href="/#" onClick={() => onPageChange(currentPage - 1)}>
+            <p onClick={() => onPageChange(currentPage - 1)}>
               &lsaquo; previus
-            </a>
+            </p>
           </li>
         )}
 
         {pages.map((page) => (
-          <li className={page === currentPage ? "active" : ""} key={page}>
-            <a href="/#" onClick={() => onPageChange(page)}>
-              {page}
-            </a>
+          <li className={page === currentPage ? "active" : ""} key={uuidv1()}>
+            <p onClick={() => onPageChange(page)}>{page}</p>
           </li>
         ))}
 
         {books === 0 || currentPage === pages.length ? null : (
           <li>
-            <a href="/#" onClick={() => onPageChange(currentPage + 1)}>
-              next &rsaquo;
-            </a>
+            <p onClick={() => onPageChange(currentPage + 1)}>next &rsaquo;</p>
           </li>
         )}
       </ul>
