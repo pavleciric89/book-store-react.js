@@ -11,7 +11,7 @@ We use [eslint](https://eslint.org/) and [prettier](https://prettier.io/) for li
 ## Add support for absolute path
 
 - Create `jsconfig.json` file in the project root
-- Paste content from [here](https://gist.github.com/radenkovic/96984e8efd995e9258cf3a82c86be497
+- Paste content from [here](https://gist.github.com/radenkovic/96984e8efd995e9258cf3a82c86be497)
   
 
 Now you can use:

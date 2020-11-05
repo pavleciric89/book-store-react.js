@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import SamplePage from "pages/sample";
 import CardList from "./components/BookList/CardList";
 import Navbar from "./components/Navbar/Navbar";
 import Searchbar from "./components/Searchbar/Searchbar";
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path="/booklist" component={CardList} />
+        <Route path="/sample" component={SamplePage} />
       </Switch>
     </Router>
   );
