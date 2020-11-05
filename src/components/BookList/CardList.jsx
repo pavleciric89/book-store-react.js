@@ -33,6 +33,8 @@ const CardList = () => {
     modalRef.current.close();
   };
 
+  console.log(books);
+
   return (
     <React.Fragment>
       <section className="booklist">
@@ -54,7 +56,7 @@ const CardList = () => {
       </section>
       <ModalDetails
         ref={modalRef}
-        data={booksPerPage}
+        data={books[selectedId]}
         selectedId={selectedId}
       />
       <Pagination
