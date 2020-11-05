@@ -1,0 +1,99 @@
+@import "../../App.css";
+.cover-about {
+  background-image: url("../../assets/cover-library.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-height: fit-content;
+  position: relative;
+  filter: blur(1px);
+}
+.textbox-about {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  height: fit-content;
+  padding: 20px;
+  text-align: center;
+  color: #f1f1f1;
+  line-height: 1.4;
+}
+.title-about,
+.subtitle-about {
+  display: block;
+  margin: auto;
+
+  color: #f1f1f1;
+}
+.title-about {
+  font-size: clamp(16px, 1.5rem, 2vw);
+  /* text-transform: uppercase; */
+  width: 70%;
+}
+.subtitle-about {
+  margin-top: 30px;
+  font-size: clamp(12px, 0.95rem, 2vw);
+  width: 95%;
+  line-height: 1.5;
+}
+.icon-close-about {
+  position: absolute;
+  display: inline-block;
+  top: -10px;
+  right: -10px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  z-index: 100;
+}
+.container-about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  height: 70%;
+}
+.pharagraph-section-about {
+  margin: 5px;
+  height: fit-content;
+}
+.icon-about {
+  font-size: clamp(3.3vh, 2.75rem, 3.6vw);
+  color: #f1f1f1;
+}
+.text-about {
+  font-size: clamp(10px, 0.7rem, 1.5vw);
+}
+@media screen and (min-width: 460px) {
+  .text-about {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .textbox-about {
+    width: 70%;
+    height: 60vh;
+  }
+  .title-about {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  .subtitle-about {
+    width: 70%;
+  }
+  .container-about {
+    flex-direction: row;
+  }
+  .pharagraph-section-about {
+    margin-top: 3%;
+    width: 33%;
+  }
+}
