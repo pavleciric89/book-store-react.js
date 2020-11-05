@@ -4,14 +4,13 @@ import BookList from "../../Data";
 import "./CardList.css";
 import Pagination from "../Pagination/Pagination";
 import Paginate from "../utils/Paginate";
-import ModalDetails from "../ModalDetails/ModalDetails";
+import AppLayout from '../AppLayout'
 // import { v1 as uuidv1 } from "uuid";
 
 const CardList = () => {
   const [books, setBooks] = useState(BookList);
   const [pageSize] = useState(12);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedId, setSelectedId] = useState(null);
 
   const deleteHandler = (id) => {
     const newList = books.filter((book) => book.id !== id);
@@ -27,7 +26,6 @@ const CardList = () => {
 
   const openModal = (id) => {
     modalRef.current.openModal();
-    setSelectedId(id);
   };
   const close = () => {
     modalRef.current.close();
@@ -36,16 +34,13 @@ const CardList = () => {
   console.log(books);
 
   return (
-    <React.Fragment>
+    <AppLayout>
       <section className="booklist">
         {booksPerPage().map((book) => {
-          const { id, img, title, author, price } = book;
+          const { id } = book;
           return (
             <Card
-              img={img}
-              title={title}
-              author={author}
-              price={price}
+              book={book}
               key={id}
               deleteHandler={() => deleteHandler(id)}
               openModal={() => openModal()}
@@ -54,11 +49,7 @@ const CardList = () => {
           );
         })}
       </section>
-      <ModalDetails
-        ref={modalRef}
-        data={books[selectedId]}
-        selectedId={selectedId}
-      />
+
       <Pagination
         itemsCount={itemsCount}
         pageSize={pageSize}
@@ -66,7 +57,7 @@ const CardList = () => {
         currentPage={currentPage}
         books={books}
       />
-    </React.Fragment>
+    </AppLayout>
   );
 };
 export default CardList;
