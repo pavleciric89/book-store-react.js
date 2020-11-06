@@ -23,12 +23,12 @@
   -moz-box-shadow: -7px 7px 5px 0px rgba(100, 100, 100, 1);
   box-shadow: -7px 7px 5px 0px rgba(100, 100, 100, 1);
 }
-.book:hover {
+/* .book:hover {
   transform: translate(2px, 2px);
   -webkit-box-shadow: -7px 7px 5px 0px rgb(116, 116, 116);
   -moz-box-shadow: -7px 7px 5px 0px rgb(114, 113, 113);
   box-shadow: -7px 7px 5px 0px rgb(119, 119, 119);
-}
+} */
 .book img {
   max-width: 100%;
   height: auto;

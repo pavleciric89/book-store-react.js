@@ -6,8 +6,12 @@ export default function SampleModal({ close, book }) {
   return (
     <div className="modal-overlay">
       <div className="modal-body">
+        <button onClick={close}>&times;</button>
+        <br/>
         Content
-        {book.title}
+        <div>
+          {book.title}
+        </div>
       </div>
     </div>
   )
