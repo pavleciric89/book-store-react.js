@@ -1,5 +1,5 @@
 import "./Searchbar.css";
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { Link} from 'react-router-dom'
 import Data from '../../Data'
 
@@ -14,7 +14,7 @@ const Searchbar = () => {
   
 
   const filteredData = Data.filter(item => {
-    if (input.length <= 2) return; // will prevent search
+    if (input.length <= 2) return; // eslint-disable-line
     const title = item.title.toLowerCase();
     const author = item.author.toLowerCase();
     if (title.includes(input) || author.includes(input))   return item;

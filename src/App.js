@@ -1,11 +1,8 @@
 import React from "react";
 import BookList from "./components/BookList";
-import Navbar from "./components/Navbar/Navbar";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import Searchbar from "./components/Searchbar/Searchbar";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import Main from "./components/LandingPage/Main";
 import About from "./components/About/About";
-import { divide } from "lodash";
 import "./App.css";
 
 
