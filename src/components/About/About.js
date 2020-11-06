@@ -45,7 +45,7 @@ const about = () => {
               <i className="bx bxs-truck"></i>
             </span>
             <p className="text-about">
-              Free worldwide delivery available with every order
+              Free worldwide delivery available with every order over $35.
             </p>
           </div>
         </div>

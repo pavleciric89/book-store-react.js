@@ -21,8 +21,7 @@
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 80%;
-  height: fit-content;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   color: #f1f1f1;
   line-height: 1.4;
@@ -31,6 +30,7 @@
 .subtitle-about {
   display: block;
   margin: auto;
+  align-items: center;
 
   color: #f1f1f1;
 }
@@ -38,12 +38,13 @@
   font-size: clamp(16px, 1.5rem, 2vw);
   /* text-transform: uppercase; */
   width: 70%;
+  height: 60px;
 }
 .subtitle-about {
-  margin-top: 30px;
   font-size: clamp(12px, 0.95rem, 2vw);
   width: 95%;
   line-height: 1.5;
+  height: 30%;
 }
 .icon-close-about {
   position: absolute;
@@ -57,12 +58,13 @@
 .container-about {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  height: 70%;
+  height: 50%;
+  align-items: center;
 }
 .pharagraph-section-about {
   margin: 5px;
-  height: fit-content;
+  height: 120px;
+  /* height: fit-content; */
 }
 .icon-about {
   font-size: clamp(3.3vh, 2.75rem, 3.6vw);
@@ -91,9 +93,9 @@
   }
   .container-about {
     flex-direction: row;
+    align-items: baseline;
   }
   .pharagraph-section-about {
-    margin-top: 3%;
     width: 33%;
   }
 }
