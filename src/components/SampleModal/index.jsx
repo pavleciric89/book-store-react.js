@@ -1,5 +1,5 @@
-import React from 'react';
-import './style.css'
+import React from "react";
+import "./style.css";
 
 export default function SampleModal({ close, book }) {
   
@@ -13,6 +13,7 @@ export default function SampleModal({ close, book }) {
           {book.title}
         </div>
       </div>
-    </div>
-  )
+    </div>,
+    document.getElementById("modal-root")
+  );
 }

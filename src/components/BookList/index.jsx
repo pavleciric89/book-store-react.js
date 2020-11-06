@@ -4,7 +4,7 @@ import BookList from "../../Data";
 import "./CardList.css";
 import Pagination from "../Pagination/Pagination";
 import Paginate from "../utils/Paginate";
-import AppLayout from '../AppLayout'
+import AppLayout from "../AppLayout";
 // import { v1 as uuidv1 } from "uuid";
 
 const CardList = () => {
@@ -22,15 +22,6 @@ const CardList = () => {
   };
   const booksPerPage = () => Paginate(books, currentPage, pageSize);
 
-  const modalRef = React.useRef();
-
-  const openModal = (id) => {
-    modalRef.current.openModal();
-  };
-  const close = () => {
-    modalRef.current.close();
-  };
-
   console.log(books);
 
   return (
@@ -43,8 +34,6 @@ const CardList = () => {
               book={book}
               key={id}
               deleteHandler={() => deleteHandler(id)}
-              openModal={() => openModal()}
-              closeModal={() => close()}
             />
           );
         })}

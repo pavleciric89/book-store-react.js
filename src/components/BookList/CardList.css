@@ -9,9 +9,7 @@
   max-width: 1170px;
   padding: 10px 0;
 }
-.booklist div {
-  margin: auto;
-}
+
 .book {
   position: relative;
   width: 170px;
@@ -72,10 +70,10 @@
   padding: 5px;
   font-weight: 600;
 }
-.bx-x {
+.delete-icon {
   display: none;
 }
-.book:hover .bx-x {
+.book:hover .delete-icon {
   display: block;
   color: crimson;
   position: absolute;
@@ -88,7 +86,7 @@
   -moz-box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.3);
 }
-.book:hover .bx-x:hover {
+.book:hover .delete-icon:hover {
   cursor: pointer;
   font-weight: bold;
 }
