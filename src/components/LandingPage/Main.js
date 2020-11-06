@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Main.css";
-
+import AppLayout from '../../components/AppLayout'
 const Main = () => {
   return (
-    <>
+    <AppLayout>
       <h1 className="main-title">Buy Books Online!</h1>
-
       <div className="flex-container">
         <div className="subtitle-button">
           <p className="sub-title">
@@ -22,7 +21,7 @@ const Main = () => {
           <div className="hero"></div>
         </div>
       </div>
-    </>
+    </AppLayout>
   );
 };
 
