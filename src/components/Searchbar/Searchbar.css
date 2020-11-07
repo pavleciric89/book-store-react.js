@@ -3,12 +3,12 @@
 .search-container {
   display: flex;
   flex-direction: column;
-  margin: 120px auto;
-  margin-bottom: 90px;
+  margin: auto;
+  margin-top: 80px;
   width: 90%;
   justify-content: center;
   text-align: center;
-  position: relative;
+  position: block;
 }
 .search-form {
   padding: 7px;
@@ -53,10 +53,44 @@ input::placeholder {
 .select::selection {
   display: none;
 }
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.results-container Link {
+  display: flex;
+  flex-direction: row;
+}
+.filtered-books {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 6px;
+  align-items: center;
+  display: inline-flex;
+  font-size: 10px;
+}
+
+.filtered-books:hover {
+  background-color: rgb(228, 228, 223);
+}
+.filtered-thumbnail {
+  height: 42px;
+  display: inline-block;
+  padding: 2px 8px;
+}
+@media screen and (min-width: 460px) {
+  .results-container {
+    margin-left: 25px;
+  }
+}
 @media screen and (min-width: 740px) {
   .search-container {
     flex-direction: row;
-    margin: 100px auto;
+    margin: 60px auto;
+    margin-bottom: 20px;
     width: auto;
   }
   .search-form {
@@ -75,5 +109,14 @@ input::placeholder {
   input {
     width: 350px;
     border-radius: 0%;
+  }
+  .results-container {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+  }
+  .filtered-books {
+    font-size: 12px;
   }
 }
