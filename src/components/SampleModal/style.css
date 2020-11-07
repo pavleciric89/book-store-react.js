@@ -4,6 +4,20 @@
   bottom: 0;
   right: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  padding: 30px;
+  background: #fff;
+  border-radius: 3px;
+  min-width: 600px;
+  min-height: 100px;
   z-index: 12;
 }
 .modal-backdrop {
@@ -17,17 +31,13 @@
 }
 .modal-box {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);
+  overflow-y: scroll;
+  box-sizing: border-box;
   /* margin-top: 220px; */
   /* min-height: 30%; */
   position: relative;
   max-height: 80%;
-  height: fit-content;
 
-  width: fit-content;
-  max-width: 90%;
   background-color: #fff;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
   z-index: 1;
@@ -64,9 +74,6 @@
 .close-modal {
   background-color: #fff;
   border-radius: 50%;
-  position: absolute;
-  top: -14px;
-  right: -14px;
   display: unset;
   box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.15);
   overflow: auto;
