@@ -1,7 +1,13 @@
 import "./Searchbar.css";
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Data from "../../Data";
+=======
+import React, {useState} from "react";
+import { Link} from 'react-router-dom'
+import Data from '../../Data'
+>>>>>>> b55f2ce3609277580ff78ef7befbc79ec6875b6a
 
 const Book = ({ book }) => {
   return (
@@ -17,8 +23,13 @@ const Book = ({ book }) => {
 const Searchbar = () => {
   const [input, setInput] = useState("");
 
+<<<<<<< HEAD
   const filteredData = Data.filter((item) => {
     if (input.length <= 2) return null; // will prevent search
+=======
+  const filteredData = Data.filter(item => {
+    if (input.length <= 2) return; // eslint-disable-line
+>>>>>>> b55f2ce3609277580ff78ef7befbc79ec6875b6a
     const title = item.title.toLowerCase();
     const author = item.author.toLowerCase();
     if (title.includes(input) || author.includes(input)) return item;
